@@ -9,14 +9,24 @@ class UserModel extends User {
       required super.createdAt,
       required super.name,
       required super.id});
+      
+  const UserModel.empty()
+      : this(
+            id: '1',
+            avatar: '_empty_avatar',
+            createdAt: '_empty_createdAt',
+            name: '_empty_name');
+
   factory UserModel.fromJson(String dataSource) =>
       UserModel.fromMap(jsonDecode(dataSource));
+
   UserModel.fromMap(DataMap map)
       : this(
             avatar: map['avatar'] as String,
             id: map['id'] as String,
             name: map['name'] as String,
             createdAt: map['createdAt'] as String);
+
   UserModel copyWith(
       {String? id, String? name, String? createdAt, String? avatar}) {
     return UserModel(
