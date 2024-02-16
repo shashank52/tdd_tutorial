@@ -4,7 +4,6 @@ import 'package:mocktail/mocktail.dart';
 import 'package:tdd_tutorial/core/error/exceptions.dart';
 import 'package:tdd_tutorial/core/error/failure.dart';
 import 'package:tdd_tutorial/src/data/data_sources/authentication_remote_data_source.dart';
-import 'package:tdd_tutorial/src/data/models/user_model.dart';
 import 'package:tdd_tutorial/src/data/repositories/authentication_repository_implementation.dart';
 
 class MockAuthRemoteDataSrc extends Mock
